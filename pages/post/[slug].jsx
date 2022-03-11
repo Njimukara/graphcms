@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router } from 'next/router'
+import { useRouter } from 'next/router'
 
 import { getPosts, getPostDetails} from '../../services'
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components'
@@ -10,6 +10,7 @@ const PostDetails = ({post}) => {
   if (router.fallback) {
     return <Loader />
   }
+
 
   return (
     <div className='container mx-auto px-10 mb-8'>
