@@ -7,7 +7,7 @@ import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loa
 const PostDetails = ({post}) => {
   const router  = useRouter()
 
-  if (router.fallback) {
+  if (router.isFallback) {
     return <Loader />
   }
 
